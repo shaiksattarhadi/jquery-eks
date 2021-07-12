@@ -12,7 +12,3 @@ spec:
       targetPort: 80
   clusterIP: 172.20.97.189
   type: LoadBalancer
-status:
-  loadBalancer:
-    ingress:
-    - ip: 
