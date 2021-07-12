@@ -4,11 +4,10 @@ metadata:
   name: k8s-jquery-svc
   namespace: jquery
 spec:
-  selector:
+  selector: 
     app: jquery
   ports:
     - protocol: TCP
       port: 80
       targetPort: 80
   # type: LoadBalancer
-
