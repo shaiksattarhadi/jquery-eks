@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-static
-  namespace: static
+  name: k8s-jquery-svc
+  namespace: jquery
 spec:
   selector:
     matchLabels:
-      app: static
+      app: jquery
   replicas: 1 # tells deployment to run 2 pods matching the template
   template:
     metadata:
       labels:
-        app: static
+        app: jquery
     spec:
       containers:
-      - name: static
+      - name: jquery
         image: 774418219404.dkr.ecr.ca-central-1.amazonaws.com/jquerymarriage:$BUILD_NUMBER 
         ports:
         - containerPort: 80
