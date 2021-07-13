@@ -3,7 +3,11 @@ kind: Service
 metadata:
   name: k8s-jquery-svc
   namespace: jquery
+  annotations:
+    service.beta.kubernetes.io/brightbox-load-balancer-healthcheck-request: /
+
 spec:
+  type: LoadBalancer
   selector: 
     app: jquery
   ports:
@@ -11,4 +15,4 @@ spec:
       port: 80
       targetPort: 80
   clusterIP: 172.20.97.189
-  type: LoadBalancer
+ 
